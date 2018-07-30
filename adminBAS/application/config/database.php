@@ -49,8 +49,13 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '123123';
+if($_SERVER['SERVER_NAME']=='localhost'){
+	$db['default']['username'] = 'root';
+	$db['default']['password'] = '123123';
+}else{
+	$db['default']['username'] = 'erpuser';
+	$db['default']['password'] = 'v4RzMsCNMJF8tRwM';
+}
 $db['default']['database'] = 'erp';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = 'inno_';
