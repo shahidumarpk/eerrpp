@@ -23,10 +23,7 @@ class Manage_Customers extends CI_Controller {
 			redirect(base_url().'errors/page-not-found-404');
 			exit;
 		}//end if
-		echo "Session<pre>";
-		print_r($this->session->userdata);
-		print_r($this->session->all_userdata());
-		exit;
+		
 		
 		//Plugin Files Permission
 		$data['PLUGIN_datagrid'] = 1;
