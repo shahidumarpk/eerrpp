@@ -41,12 +41,17 @@ date_default_timezone_set('Asia/Karachi');
 define('DEFAULT_TITLE','Welcome to NSOL ERP');
 define('DEFAULT_META_KEYWORDS','NSOL');
 define('DEFAULT_META_DESCRIPTION','NSOL');
-
-define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/customer/');
-define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
-define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
-define('ADMIN_SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
-
+if($_SERVER['SERVER_NAME']=='localhost'){
+    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/customer/');
+    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
+    define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
+    define('ADMIN_SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
+}else{
+    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/customer/');
+    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/');
+    define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
+    define('ADMIN_SURL','http://'.$_SERVER['HTTP_HOST'].'/adminBAS/');
+}
 define('IMG',SURL.'assets/img/');
 define('CSS',SURL.'assets/css/');
 define('FONTS',SURL.'assets/fonts/');

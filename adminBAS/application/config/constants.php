@@ -41,12 +41,17 @@ date_default_timezone_set('Asia/Karachi');
 define('DEFAULT_TITLE','Welcome to NSOL Admin Panel');
 define('DEFAULT_META_KEYWORDS','Default Meta Keywords');
 define('DEFAULT_META_DESCRIPTION','default Meta Description');
+define('SITE_NAME','NSOL');
 
-define('SITE_NAME','Inno Tech');
-define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
-define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
-define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
-
+if($_SERVER['SERVER_NAME']=='localhost'){
+    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
+    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
+    define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
+}else{
+    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
+    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
+    define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
+}
 define('IMG',SURL.'assets/img/');
 define('CSS',SURL.'assets/css/');
 define('FONTS',SURL.'assets/fonts/');
