@@ -245,6 +245,7 @@ class mod_customer extends CI_Model {
 		
 		$created_date = date('Y-m-d G:i:s');
 		$created_by_ip = $this->input->ip_address();
+		print_r($this->session->userdata); 
 		echo "Create by:  ".$created_by = $this->session->userdata('customer_id');
 		exit;
 	if($account_type == 'Personal'){
