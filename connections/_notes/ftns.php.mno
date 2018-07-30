@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rmenus" value="name:plotTypeId;datatype:int,name:plotSize;datatype:int,name:cashCost;datatype:int,name:installmentCost;datatype:int,name:downPayment;datatype:int,name:perMonth;datatype:int,name:perHalfAnnum;datatype:blob,name:plotType;datatype:blob" />
+</info>
