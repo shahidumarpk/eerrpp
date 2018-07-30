@@ -333,7 +333,7 @@ class mod_common extends CI_Model {
 		$this->db->dbprefix('messages');
 		$this->db->select('COUNT(message_id) as num_messages');
 		$this->db->where('message_status',0);
-		$this->db->group_by('message_id');
+		//$this->db->group_by('message_id');
 		$this->db->order_by('message_status', ASC);
 		$this->db->order_by('id', DESC);
 		$this->db->where('to',$this->session->userdata('admin_id'));
