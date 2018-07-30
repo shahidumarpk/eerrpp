@@ -48,8 +48,8 @@ if($_SERVER['SERVER_NAME']=='localhost'){
     define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
     define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
 }else{
-    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/erp/');
-    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/erp/adminBAS/');
+    define('MURL','http://'.$_SERVER['HTTP_HOST'].'/');
+    define('SURL','http://'.$_SERVER['HTTP_HOST'].'/adminBAS/');
     define('FRONT_SURL','http://'.$_SERVER['HTTP_HOST'].'/');
 }
 define('IMG',SURL.'assets/img/');
