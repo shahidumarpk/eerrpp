@@ -28,7 +28,7 @@ if(isset($_REQUEST['request']) &&  ($_REQUEST['request'] == 'ios' || $_REQUEST['
 header('Content-type: application/json');
 		$response['success']=0;
 		$response['message']='Request is not Valid';
-		$response['data']=array();
+		//$response['data']=array();
 		die(json_encode($response));	
 	
 }
@@ -41,7 +41,7 @@ if(!$user_id){
 
 $response['success']=0;
 $response['message']='Autentication error. User id is empty';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 }
 
@@ -50,7 +50,7 @@ if(!$token){
 
 $response['success']=0;
 $response['message']='Autentication error. Token is empty';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 }
 
@@ -65,7 +65,7 @@ if(empty($user_details )){
 
 $response['success']=0;
 $response['message']='Autentication error. Token is Invalid';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 	
 }
@@ -124,7 +124,7 @@ print_r($messages);exit;*/
 	
 		$response['success']=0;
 		$response['message']='No Projects Found';
-			$response['data']=array();
+		//$response['data']=array();
 		die(json_encode($response));	
 		
 	}

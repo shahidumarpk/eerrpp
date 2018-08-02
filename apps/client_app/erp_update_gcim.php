@@ -26,7 +26,7 @@ if(!$user_id){
 
 $response['success']=0;
 $response['message']='Autentication error. User id is empty';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 }
 
@@ -35,7 +35,7 @@ if(!$token){
 
 $response['success']=0;
 $response['message']='Autentication error. Token is empty';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 }
 
@@ -50,14 +50,14 @@ if(empty($user_details )){
 
 $response['success']=0;
 $response['message']='Autentication error. Token is Invalid';
-$response['data']=array();
+//$response['data']=array();
 die(json_encode($response)); 
 	
 }
 
 //check if gcim/regiid is emtpy
 if(!$regid){
-$response['product']=array();
+//$response['product']=array();
 $response['success']=0;
 $response['message']='Autentication error. Token is empty';
 die(json_encode($response)); 
@@ -72,7 +72,7 @@ $user_details = $db->getOne('customers');
 
 if(empty($user_details )){
 	
-$response['product']=array();
+//$response['product']=array();
 $response['success']=0;
 $response['message']='Autentication error. Token is Invalid';
 die(json_encode($response)); 
@@ -90,17 +90,16 @@ $db_insert['gcm_regid'] = $regid;
 
 $db->where ('id',$user_id );
 if (!$db->update ('customers', $db_insert)){
-	
-$response["success"] = 0;
-$response["message"]="Error in updating gcim id";
-$response["user_id"]=$user_id;
-die(json_encode($response));
+	$response["success"] = 0;
+	$response["message"]="Error in updating gcim id";
+	$response["user_id"]=$user_id;
+	die(json_encode($response));
 }else{
 	
 	$response["success"] = 1;
-$response["message"]="gcim id updated successfully";
-$response["user_id"]=$user_id;
-die(json_encode($response));
+	$response["message"]="gcim id updated successfully";
+	$response["user_id"]=$user_id;
+	die(json_encode($response));
 	
 }
 
