@@ -118,10 +118,10 @@ die( json_encode($response));
 
 		
 }else{ //error not found
-
+$data=array("m" => "failed");
 $response["success"] = 0;
 $response["message"]="Invalid User Name Or Password";
-$response["data"]=array();
+$response["data"]=$data;
 die( json_encode($response));	
 }
 
