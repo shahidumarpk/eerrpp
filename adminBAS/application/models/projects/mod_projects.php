@@ -1182,7 +1182,7 @@ class mod_projects extends CI_Model {
 			$this->email->subject($subject);  
 			$this->email->message($email_body);
 			// $this->email->attach($invoice_pdf_path);
-			echo $to_customer;
+			//echo $to_customer;
 			if(trim($post_type) == 1){
 				$this->email->send();
 			}//end if(trim($post_type) == 1)
