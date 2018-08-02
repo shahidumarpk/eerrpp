@@ -19,14 +19,11 @@ error_log( $time .   $data  .PHP_EOL , 3, "erp_login.log");
 
 
 //check if its a valid request from our IOS or Andriod Appuser
-if(isset($_REQUEST['request']) &&  ($_REQUEST['request'] == 'ios' || $_REQUEST['request'] == 'android' )   ) {
-	
-	
+if(isset($_REQUEST['request']) &&  ($_REQUEST['request'] == 'ios' || $_REQUEST['request'] == 'android' )   ) {	
 	$app_type =  $_REQUEST['request'];
-	
 }else{
 	
-header('Content-type: application/json');
+		header('Content-type: application/json');
 		$response['success']=0;
 		$response['message']='Request is not Valid';
 		$response['data']=array();
@@ -71,12 +68,7 @@ $user_id= $user_details['id'];
 $data = array();
 $data["user_id"]=$user_id;		
 $data["display_name"]=$user_details['first_name'] . ' ' .  $user_details['last_name'];
-$data["avatar"]='http://biralsabia.net/erp/assets/customer_files/'.$user_id.'/'.$user_details['profile_image'];
-
-
-
-/*<img src="http://biralsabia.net/erp/adminBAS/assets/user_files//9045/user_avatar9045.jpg">*/
-
+$data["avatar"]=SURL.$user_id.'/'.$user_details['profile_image'];
 
 
 $random = $user_id . '' .rand();
