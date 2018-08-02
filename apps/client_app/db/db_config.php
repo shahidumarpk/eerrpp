@@ -6,20 +6,21 @@ require_once('db/mysqlidb.php');
 
 //include global helper
 require_once('db/helper.php');
-define('SURL','http://'.$_SERVER['HTTP_HOST'].'/projects/erp/');
+define('SURL','http://'.$_SERVER['HTTP_HOST'].'/');
 
 
+if($_SERVER['SERVER_NAME']=='localhost'){
+    $username_conn = 'root';
+    $password_conn = '123123';
+}else{
+    $username_conn = 'erpuser';
+    $password_conn = 'v4RzMsCNMJF8tRwM';
+}
 
-$hostname_conn = '104.131.168.241';
-$database_conn = 'taleemeq_erp';
-$username_conn = 'taleemeq_erpusr';
-$password_conn = 'VB$gLEW*LST0';
 
 
 $hostname_conn = 'localhost';
-$database_conn = 'bas_erp';
-$username_conn = 'root';
-$password_conn = 'XaPPPU1@VV';
+$database_conn = 'erp';
 
 //intialize connect db
 //MysqliDb('host', 'username', 'password', 'databaseName');
