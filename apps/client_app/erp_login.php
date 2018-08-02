@@ -26,7 +26,7 @@ if(isset($_REQUEST['request']) &&  ($_REQUEST['request'] == 'ios' || $_REQUEST['
 		header('Content-type: application/json');
 		$response['success']=0;
 		$response['message']='Request is not Valid';
-		$response['data']=array();
+		//$response['data']=array();
 		die(json_encode($response));	
 	
 }
@@ -46,7 +46,7 @@ if(!$username || !$password ) {
 	//check if username or password is empty
 $response["success"] = 0;
 $response["message"]="Username or Password cannot be emtpy";
-$response["data"]=array();	
+//$response["data"]=array();	
 die( json_encode($response));
 }
 	
@@ -88,7 +88,7 @@ if (!$db->update ('customers', $db_insert)){
 	
 $response["success"] = 0;
 $response["message"]="Error in Token Generation";
-$response["data"]=array();
+//$response["data"]=array();
 die( json_encode($response));
 }
 
